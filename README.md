@@ -1,0 +1,6 @@
+# VC_Ping
+使用socket库发送ICMP包进行Ping
+
+(Windows情况下)代码使用了SOCK_RAW发送原始数据,因为较为底层需要管理员权限启动程序否则会返回10013错误
+
+另外在Windows环境下可以使用iphlpapi.dll里的ICMPCreateFile,ICMPSendEcho2Ex等函数实现Ping功能(不需要管理员权限)
